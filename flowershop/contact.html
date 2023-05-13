@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/animation.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="cointainer">
+        <div id="Layer_Menu">
+            <button class="MENU">
+                <span class="HAMBURGER_MENU">
+                    <span class="HAMBURGER_CLICK"></span>
+                </span>
+            </button>
+            <div class="navigation">
+                <ul class="navigation_list">
+                    <li><a href="index.html">Srona Glowna</a></li>
+                    <li><a href="index.html">Informacje</a></li>
+                    <li><a href="index.html">Projekty</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <nav>
+                <ul id="_Menu">
+                    <li><a href="index.html">Srona Glowna</a></li>
+                    <li><a href="index.html">Informacje</a></li>
+                    <li><a href="index.html">Projekty</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div id="photo">
+            <div id="textOn">
+                Kontakt<br>
+                <div id="row">
+                    <div id="img">
+                        <img src="css/photo/shop.png" />
+                    </div>
+                    <div id='Main_Text'>
+                        Telefon
+                    </div>     
+                </div>
+                <div id="row">
+                    <div id="img">
+                        <img src="css/photo/shop.png" />
+                    </div>
+                    <div id='Main_Text'>
+                        Adres
+                    </div>     
+                </div>
+                <div id="row">
+                    <div id="img">
+                        <img src="css/photo/shop.png" />
+                    </div>
+                    <div id='Main_Text'>
+                        Nasza oferta
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <div id="Information">
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        const hamburger = document.querySelector('.MENU');
+        const nav = document.querySelector('.navigation');
+
+        const handleClick = () => {
+            hamburger.classList.toggle('MENU_CLICKED');
+            nav.classList.toggle('navigation--active');
+        }
+
+        hamburger.addEventListener('click', handleClick);
+    </script>
+</body>
+
+</html>
