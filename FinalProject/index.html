@@ -6,33 +6,34 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='css/animation.css' type='text/css' />
-    <link rel='stylesheet' href='css/style.css' type='text/css' />
+    <link rel="stylesheet" media="screen and (max-width: 1000px)" href="css/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 1001px)" href="css/styledeskop.css">
     <script defer src='script.js'></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div id='FullPageCointainer'>
-        <div id='LayerMenu'>
+    <div id='FullPageContainer'>
+        <div id='BarLayer'>
             <button class='MENU'>
                 <span class='HAMBURGER_MENU'>
                     <span class='HAMBURGER_CLICK'></span>
                 </span>
             </button>
-            <div class='LayerMenuNavigation'>
-                <ul class='LayerMenuNavigationList'>
-                    <li><button class='LocationButton' type='button'>Strona glowna</button></li>
-                    <li><button class='LocationButton' type='button'>Informacje</button></li>
-                    <li><button class='LocationButton' type='button'>Projekty</button></li>
-                    <li><button class='LocationButton' type='button'>Kontakt</button></li>
+            <div class='BarLayerNavigation'>
+                <ul class='BarLayerNavigationList'>
+                    <li><button class='BarButton' type='button'>Strona glowna</button></li>
+                    <li><button class='BarButton' type='button'>Informacje</button></li>
+                    <li><button class='BarButton' type='button'>Projekty</button></li>
+                    <li><button class='BarButton' type='button'>Kontakt</button></li>
                 </ul>
             </div>
             <nav>
-                <ul id='_Menu'>
-                    <li><button class='LocationButton LocationButtonDeskop' type='button'>Strona glowna</button></li>
-                    <li><button class='LocationButton LocationButtonDeskop' type='button'>Informacje</button></li>
-                    <li><button class='LocationButton LocationButtonDeskop' type='button'>Projekty</button></li>
-                    <li><button class='LocationButton LocationButtonDeskop' type='button'>Kontakt</button></li>
+                <ul id='Bar'>
+                    <li><button class='BarButtonDeskop' type='button'>Strona glowna</button></li>
+                    <li><button class='BarButtonDeskop' type='button'>Informacje</button></li>
+                    <li><button class='BarButtonDeskop' type='button'>Projekty</button></li>
+                    <li><button class='BarButtonDeskop' type='button'>Kontakt</button></li>
                 </ul>
             </nav>
         </div>
@@ -49,42 +50,40 @@
             <div class='InformationPageContainer'>
                 <div class='InformationPageFoto'></div>
                 <div id='InformationPageRightCollumn'>
-                    <div id="InformationCointainerRightCollumn">
-                        <div id="InformationAboutLeftRightCollumn">
-                            <div id='InformationPageTextRow'>
-                                <div class='InformationPageHeaderText'>
-                                    O mnie
-                                </div>
-                            </div>
-                            <div class='InformationPageDescriptionText'>
-                                W pracy dążę głównie do samorozwoju i polepszania swoich kompetencji zawodowych oraz
-                                zdobycia nowych
-                                umiejętności. Interesują mnie technologie webowe i skupiam się na rozwoju umiejętności
-                                związanych z nimi.
+                    <div id="InformationPageRightCollumnText">
+
+                        <div id='InformationPageTextRow'>
+                            <div class='InformationPageHeaderText'>
+                                O mnie
                             </div>
                         </div>
-                        <div id="InformationAboutRightRightCollumn">
-                            <div id='InformationPageTextRow'>
-                                <div class='InformationPageHeaderText'>
-                                    About me
-                                </div>
-                            </div>
-                            <div class='InformationPageDescriptionText'>
-                                W pracy dążę głównie do samorozwoju i polepszania swoich kompetencji zawodowych oraz
-                                zdobycia
-                                nowych
-                                umiejętności. Interesują mnie technologie webowe i skupiam się na rozwoju umiejętności
-                                związanych z
-                                nimi.
+                        <div class='InformationPageDescriptionText'>
+                            W pracy dążę głównie do samorozwoju i polepszania swoich kompetencji zawodowych oraz
+                            zdobycia nowych
+                            umiejętności. Interesują mnie technologie webowe i skupiam się na rozwoju umiejętności
+                            związanych z nimi.
+                        </div>
+
+                        <div id='InformationPageTextRow'>
+                            <div class='InformationPageHeaderText'>
+                                About me
                             </div>
                         </div>
+                        <div class='InformationPageDescriptionText'>
+                            At work, I strive mainly for self-development and improvement of my professional competences
+                            and
+                            get new ones
+                            skills. I am interested in web technologies and I focus on skills development
+                            related to them.
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
         <div class='QualificationPage MainPage'>
             <div class='QualificationPageNav'></div>
-            <div class="QualificationCointainer">
+            <div class="QualificationContainer">
                 <div id='QualificationPageTextRow'>
                     <div class='QualificationPageHeaderText'>
                         Umiejętności
@@ -131,7 +130,7 @@
         <div class='ProjectPage MainPage'>
             <div class="ProjectPageContainer">
                 <div id="ProjectPageLeftCollumn">
-                    <div id="ProjectCointainerLeftCollumn">
+                    <div id="ProjectContainerLeftCollumn">
                         <div id='ProjectPageTextRow'>
                             <div class='ProjectPageHeaderText'>
                                 Inne Umiejętności
@@ -169,12 +168,14 @@
                         </div>
                     </div>
                     <div class='ProjectPagePhoto'>
-                        <div class='openfoto'></div>
+                        <div class='ProjectPageOpenfoto'>
+                            <div id="ProjectPageOpenfotoText">OPEN</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="LocationMainPage"></div>
+        <div class="ScrollButton"></div>
         <div class='field'>
             <div id="ProjectPageFieldTextRow">
                 <div id='ProjectPageFieldButtonReturn'></div>

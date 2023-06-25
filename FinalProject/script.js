@@ -1,5 +1,5 @@
 let Check = document.getElementById('ProjectPageFieldButtonReturn');
-let Click = document.getElementsByClassName('openfoto')[0];
+let Click = document.getElementsByClassName('ProjectPageOpenfoto')[0];
 let Field = document.getElementsByClassName('field')[0];
 
 
@@ -47,11 +47,11 @@ function FillBar(x){
 ////////////////////////////////////////////////////////////
 //Funkcja odpowiadajaca za rozwiniecie menu dla wersji mobilnej strony
 const hamburger = document.querySelector('.MENU');
-const nav = document.querySelector('.LayerMenuNavigation');
+const nav = document.querySelector('.BarLayerNavigation');
 const handleClick = () => {
     hamburger.classList.toggle('MENU_CLICKED');
-    nav.classList.toggle('LayerMenuNavigation--active');
-    if (nav.classList.contains('LayerMenuNavigation--active')) {
+    nav.classList.toggle('BarLayerNavigation--active');
+    if (nav.classList.contains('BarLayerNavigation--active')) {
         document.body.style.overflow = 'hidden';
     } else {
         document.body.style.overflow = '';
@@ -87,19 +87,19 @@ function scrollToElement(className) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
-const StronaGlowna = document.getElementsByClassName('LocationButton')[0];
+const StronaGlowna = document.getElementsByClassName('BarButton')[0];
 StronaGlowna.addEventListener('click', function() {
   scrollToElement('MainPage');
 });
-const Informacje = document.getElementsByClassName('LocationButton')[1];
+const Informacje = document.getElementsByClassName('BarButton')[1];
 Informacje.addEventListener('click', function() {
   scrollToElement('InformationPage');
 });
-const Qualification = document.getElementsByClassName('LocationButton')[2];
+const Qualification = document.getElementsByClassName('BarButton')[2];
 Qualification.addEventListener('click', function() {
   scrollToElement('QualificationPage');
 });
-const Project = document.getElementsByClassName('LocationButton')[3];
+const Project = document.getElementsByClassName('BarButton')[3];
 Project.addEventListener('click', function() {
   scrollToElement('ProjectPage');
 });
@@ -109,25 +109,25 @@ Project.addEventListener('click', function() {
 
 
 
-const StronaGlownaDeskop = document.getElementsByClassName('LocationButtonDeskop')[0];
+const StronaGlownaDeskop = document.getElementsByClassName('BarButtonDeskop')[0];
 StronaGlownaDeskop.addEventListener('click', function() {
   scrollToElement('MainPage');
 });
-const InformacjeDeskop = document.getElementsByClassName('LocationButtonDeskop')[1];
+const InformacjeDeskop = document.getElementsByClassName('BarButtonDeskop')[1];
 InformacjeDeskop.addEventListener('click', function() {
   scrollToElement('InformationPage');
 });
-const QualificationDeskop = document.getElementsByClassName('LocationButtonDeskop')[2];
+const QualificationDeskop = document.getElementsByClassName('BarButtonDeskop')[2];
 QualificationDeskop.addEventListener('click', function() {
   scrollToElement('QualificationPage');
 });
-const ProjectDeskop = document.getElementsByClassName('LocationButtonDeskop')[3];
+const ProjectDeskop = document.getElementsByClassName('BarButtonDeskop')[3];
 ProjectDeskop.addEventListener('click', function() {
   scrollToElement('ProjectPage');
 });
 
-const LocationMainPage = document.getElementsByClassName('LocationMainPage')[0];
-LocationMainPage.addEventListener('click', function() {
+const ScrollButton = document.getElementsByClassName('ScrollButton')[0];
+ScrollButton.addEventListener('click', function() {
   scrollToElement('MainPage');
 });
         

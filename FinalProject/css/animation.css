@@ -12,7 +12,7 @@
 	position: fixed;
 	z-index: 51515;
 }  
-.MENU, .LayerMenuNavigation {
+.MENU, .BarLayerNavigation {
 	transition: transform .3s .1s ease-in-out;
 }  
 .MENU_CLICKED {
@@ -68,7 +68,7 @@
 
 
 /*Blok opisajacy menu po rozwinieciu na mobilnej stronie*/
-.LayerMenuNavigation {
+.BarLayerNavigation {
     position: fixed !important;
     top: 0;
     left: 0;
@@ -79,14 +79,14 @@
     transform: translateX(-100%);
     z-index: 51;  
 }
-.LayerMenuNavigation--active {
+.BarLayerNavigation--active {
 	transform: translateX(0px);
 }  
-.LayerMenuNavigation__list {
+.BarLayerNavigation__list {
 	margin-top: 50px;
 	list-style: none;
 }  
-.LayerMenuNavigation__item {
+.BarLayerNavigation__item {
 	margin-bottom: 20px;
 }
 /*//////////////////////////////////////////*/
