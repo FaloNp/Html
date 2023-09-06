@@ -270,20 +270,55 @@ Check.addEventListener('click', () => {
 
 ///////
 // Pobierz wszystkie kontenery ProjectPageFieldContainerName
-const containers = document.querySelectorAll('#ProjectPageFieldContainer');
+function Elevator(className, i) {
+  const element = document.querySelectorAll('.' + className)[i];
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+}
 
-containers.forEach(container => {
-  const containerName = container.querySelector('#ProjectPageFieldContainerName');
-  const description = container.querySelector('#ProjectPageFieldContainerDescription');
+const containers = document.querySelectorAll('.ProjectPageFieldContainerBoxInfo');
+const lastelement = containers.length - 1;
 
-  containerName.addEventListener('mouseenter', () => {
-    description.style.right = '0%';
+containers.forEach((container, i) => {
+  const buttonleft = container.parentElement.querySelector('.ProjectPageFieldContainerBoxLeft');
+  const buttonright = container.parentElement.querySelector('.ProjectPageFieldContainerBoxRight');
+
+  buttonright.addEventListener('click', () => {
+    let id = i + 1;
+    if (id > lastelement) {
+      id = 0;
+    }
+    Elevator('ProjectPageFieldContainer', id);
   });
 
-  containerName.addEventListener('mouseleave', () => {
-    description.style.right = '100%';
+  buttonleft.addEventListener('click', () => {
+    let id = i - 1;
+    if (id < 0) {
+      id = lastelement;
+    }
+    Elevator('ProjectPageFieldContainer', id);
   });
 });
 
 
 
+
+///////
+// Pobierz wszystkie kontenery ProjectPageFieldContainerName
+const container = document.querySelectorAll('.ProjectPageFieldContainer');
+
+container.forEach(container => {
+  const containerName = container.querySelector('#ProjectPageFieldContainerName');
+  const description = container.querySelector('#ProjectPageFieldContainerDescription');
+  
+  const feld=document.getElementsByClassName('field')[0];
+
+  feld.addEventListener('mouseenter', () => {
+    description.style.right = '0%';
+  });
+  
+  feld.addEventListener('mouseleave', () => {
+    description.style.right = '100%';
+  });
+});
