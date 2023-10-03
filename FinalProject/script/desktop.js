@@ -37,24 +37,24 @@ const observer = new IntersectionObserver((entries, observer) => {
 observer.observe(target);
 
 //Projects: Funkcja odpowiadająca za przewijanie nastepnych projektow
-const containers = document.querySelectorAll('.FieldPageContainerBoxInfo');
+const containers = document.querySelectorAll('.FieldPageContainer');
 const lastelement = containers.length - 1;
 containers.forEach((container, i) => {
-  const buttonleft = container.parentElement.querySelector('.FieldPageContainerBoxLeft');
-  const buttonright = container.parentElement.querySelector('.FieldPageContainerBoxRight');
+  const buttonleft = container.parentElement.querySelector('.FieldPageContainerLeft');
+  const buttonright = container.parentElement.querySelector('.FieldPageContainerRight');
   buttonright.addEventListener('click', () => {
     let id = i + 1;
     if (id > lastelement) {
       id = 0;
     }
-    Elevator('FieldPageContainer', id);
+    Elevator('FieldBlock', id);
   });
   buttonleft.addEventListener('click', () => {
     let id = i - 1;
     if (id < 0) {
       id = lastelement;
     }
-    Elevator('FieldPageContainer', id);
+    Elevator('FieldBlock', id);
   });
 });
 

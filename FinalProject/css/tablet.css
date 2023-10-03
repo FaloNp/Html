@@ -354,7 +354,7 @@ nav ul li a:hover {
 .Field {
     width: 100%;
     height: 100%;
-    background-color: var(--container_color);
+    background-color: white;
     border-radius: 20px;
 
     position: absolute; 
@@ -369,6 +369,8 @@ nav ul li a:hover {
     overflow: hidden;
     
     transition: left 0.5s ease-in-out;   
+
+    box-shadow: 10px 12px 10px rgba(0, 0, 0, 0.2);
 }
 
 .Field.active {
@@ -380,110 +382,20 @@ nav ul li a:hover {
     height:var(--container_size);
     overflow:hidden;
 }
-.FieldPageContainer {
-    padding: 0px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+
+.FieldBlock{
+    width: 100%;
+    height: 100%;
 }
 
-#FieldPageContainerRow {
-    margin: 10px;
+.FieldPageRow {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: start;
+    padding: 0px 25px;
     flex-direction: row;
-    min-height: 25px;
-    font-size: 0px;
-}
-
-.FieldPageContainerHeader {
-    font-size: 22px;
-    margin: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#FieldPageContainerHeader:hover {
-    cursor: pointer;
-}
-
-.FieldPageContainerBox {
-    width: 100%;
-    max-height: calc(72vh - 90px);
-    display: flex;
-    flex-direction: row;
-    background-color: transparent;
-}
-
-.FieldPageContainerBoxLeft,
-.FieldPageContainerBoxRight {
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:transparent;
-    color: black;
-    cursor: pointer;
-    background-color: var(--container_color);
-    transition: background-color 0.3s ease;
-}
-
-.FieldPageContainerBoxLeft:hover,
-.FieldPageContainerBoxRight:hover {
-    background-color:#a1ab72;
-}
-#ButtonLeft{
-    margin:0px 2px;
-    width: 25px;
-    height: 25px;
-    border: 4px solid black;
-    border-left: none;
-    border-bottom: none;
-    background-color: transparent;
-    transform: rotate(-135deg);
-}
-.ButtonRight{
-    transform: rotate(45deg)!important;
-}
-
-.FieldPageContainerBoxInfo {
-    position: relative;
-    width: 100%;
-    max-height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    
-}
-#videoPlayer {
-    background-color: black;
-    border-radius: 20px;
-    width: 70%;
-    aspect-ratio: 16/9;
-   
-}
-
-
-
-
-#FieldPageContainerDescription {
-    transition: all 0.7s ease;
-    position: relative;
-    top: -20px;
-    right: 100%;
-    z-index: 2;
-    min-height: 100vh;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 20px;
-    font-size: xx-large;
+    height: 50px;
 }
 
 #FieldPageButtonReturn{
@@ -495,15 +407,100 @@ nav ul li a:hover {
     border: 4px solid black;
     transition: all 0.4s ease;
     border-radius: 4px;
-    position: absolute !important;
-    top:20px;
-    left: 20px;
 }
 
 #FieldPageButtonReturn:hover {
     border-left: none;
     border-bottom: none;
     transform: rotate(-135deg);
+}
+
+.FieldPageContainer {
+    padding: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    height: calc(100% - 100px);
+}
+.FieldPageContainerLeft{
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.ButtonLeft{
+    width: 25px;
+    height: 25px;
+    border: 4px solid black;
+    border-left: none;
+    border-bottom: none;
+    background-color: transparent;
+    transform: rotate(-135deg);
+    transition: all 0.3s ease;
+}
+.ButtonLeft:hover{
+    background-color: beige;
+}
+.FieldPageContainerLeftCollumn{
+    width: 30%;
+}
+#FieldPageContainerDescription {
+    transition: all 0.7s ease;
+    position: relative;
+    top: -20px;
+    right: 100%;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+    font-size: x-large;
+    overflow-y: scroll;
+}
+
+.FieldPageContainerDescriptionHeader {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+.FieldPageContainerRightCollumn{
+    width: 70%;
+}
+
+.FieldPageContainerRightCollumnInfo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    
+}
+#videoPlayer {
+    background-color: black;
+    border-radius: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 16/9;
+    
+   
+}
+
+
+.FieldPageContainerRight {
+    
+    
+}
+.ButtonRight{
+    transform: rotate(45deg)!important;
+}
+.ButtonRight:hover{
+    background-color: beige;
 }
 
 
