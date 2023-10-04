@@ -16,6 +16,10 @@
     align-items: start;
     justify-content: start;
 }
+section{
+    
+   overflow-y: scroll;
+}
 /*//////////////////////////////////////////*/
 
 /* Deklarowanie przycisków */
@@ -241,6 +245,7 @@
     flex-direction: column;
     align-items: start;
     justify-content: start;
+    height: 100%;
     min-height: 100vh;
     overflow: hidden;
 }
@@ -428,86 +433,22 @@
 #FieldPage{
     width: 100%;
     min-height: calc(100% - 40px);
-    margin-top: 40px;
-    background-color:var(--container_color);
     background-color: transparent;
 }
-.FieldPageContainer{
-    
-    display: flex;
-    flex-direction: column;
-}
-.FieldPageContainerSwap{
-}
-.FieldPageContainerHeader{
-    display: flex;
+.FieldPageRow {
+    width: 100%;
     align-items: center;
-    justify-content: start;
-    padding: 20px;
-    width: 100%;
+    justify-content: center;
+    padding: 0px 25px;
     flex-direction: row;
-    font-size: 20px;  
-    background: #b4bfa2
-}
-.FieldPageContainerHeaderSwap{
-    justify-content: end;
-}
-.FieldPageContainerBox {
-    width: 100%;
-    height: 500px;
-    max-height: 500px;
-    display: flex;
-    flex-direction: row;
-    background-color: transparent;
-}
-.FieldPageContainerBoxLeft,
-.FieldPageContainerBoxRight {
+    height: 50px;
     display: none;
+    background-color: white;
+    margin-bottom: 20px;
 }
-.FieldPageContainerBoxInfo{
-    position: relative;
-    width: 100%;
-    max-height: 100%;
-    overflow: hidden;
+.FieldPageRowMobile{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    flex-direction: column-reverse;
 }
-#videoPlayer {
-    background-color: black;
-    max-height: 300px;
-}
-.FieldPageContainerBoxInfo video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-#FieldPageContainerDescription{
-    width: 100%;
-    height: 200px;
-    padding:var(--Project_margin);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: large;
-    background: linear-gradient(45deg, #abecd6 0%, #fbed96 100%);
-}
-
-#FieldRowMobile{
-    width: 100%;
-    height: 40px;
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #b4bfa2
-}
-
 #FieldPageButtonReturn{
     width: 25px;
     height: 25px;
@@ -518,9 +459,74 @@
     transition: all 0.4s ease;
     border-radius: 4px;
 }
-#FieldPageButtonReturn:hover{
+#FieldPageButtonReturn:hover {
     border-left: none;
     border-bottom: none;
     transform: rotate(-135deg);
+}
+.FieldBlock{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.FieldPageContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: calc(100% - 50px);
+    margin: auto;
+    padding: 20px 0px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.FieldPageContainerLeft,
+.FieldPageContainerRight{
+    display: none;
+}
+.ButtonLeft,
+.ButtonRight {
+    display: none;
+}
+.FieldPageContainerLeftCollumn{
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: start;
+}
+#FieldPageContainerDescription {
+    transition: all 0.7s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    font-size: x-large;
+}
+.FieldPageContainerDescriptionHeader {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+.FieldPageContainerRightCollumn{
+    width: 100%;
+    height: calc(100% - 200px);
+}
+.FieldPageContainerRightCollumnInfo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    
+}
+#videoPlayer {
+    background-color: black;
+    border-radius: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 16/9;    
 }
 /*//////////////////////////////////////////*/
