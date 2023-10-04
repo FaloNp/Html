@@ -143,6 +143,7 @@ function changeTextOnHover(elementId, text) {
 
 //Otwieranie elementu w którym zawarte są projekty
 function initializeProjects() {
+  
   const menuIcon = document.querySelector(".ProjectsPageButton");
   const menu = document.querySelector(".Field");
 
@@ -157,16 +158,16 @@ function initializeProjects() {
 
 //Zamykanie elementu w którym zawarte są projekty
 function CloseProjects() {
-  const menuIcon = document.querySelector("#FieldPageButtonReturn");
+  const menuIcons = document.querySelectorAll(".FieldPageButtonReturn");
   const menu = document.querySelector(".Field");
-
-  let isMenuOpen = true;
-
-  menuIcon.addEventListener('click', function () {
-    isMenuOpen = !isMenuOpen;
-    menu.classList.remove("active",isMenuOpen);
-  }); 
+  
+  menuIcons.forEach(menuIcon => {
+    menuIcon.addEventListener('click', function () {
+      menu.classList.remove("active");
+    });
+  });
 }
+
 //Rozsuwanie informacji o danym projekcie
 
 
