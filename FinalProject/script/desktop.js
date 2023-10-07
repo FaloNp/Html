@@ -23,7 +23,7 @@ scrollToElement('HomePageNav');
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //Information: Funkcja odpowiedzialna za wypelnienie pasków postępu
-const target = document.querySelector('.BackPanel.InformationPage');
+const target = document.querySelector('.InformationPageProgresBarUpdate');
 let pBarsFilled = false; // Flaga śledząca, czy paski zostały już wypełnione
 
 const observer = new IntersectionObserver((entries, observer) => {

@@ -64,7 +64,8 @@ section{
 .menu-content {
     position: absolute;
     transform: translateX(-100%);
-    text-align: center;
+    text-align: start;
+    padding-left: 50px;
 }
 
 .menu ul {
@@ -86,9 +87,6 @@ section{
     border:none;
     transition: 0.5s;
     font-size: 50px;
-
-
-    
     font-weight: bold;
 }
 
@@ -185,6 +183,7 @@ section{
     min-height: 210px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 100px;
 }
 .AboutPageFoto{
     width: 210px;
@@ -447,6 +446,7 @@ section{
     width: 100%;
     min-height: calc(100% - 40px);
     background-color: transparent;
+    overflow-y:scroll;
 }
 .FieldPageRow {
     width: 100%;
