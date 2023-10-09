@@ -107,7 +107,7 @@ section{
     margin: auto;
 }
 /* Blok odpowiadający paskowi nawigacji */
-#BarLayer {
+.BarLayer {
     height: var(--bar_size);
 }
 
@@ -386,9 +386,9 @@ section{
     max-height: 50vh;
     overflow: hidden;
     background-color: beige;
-    height: auto;
+    height: 100%;
     padding: 20px;
-    min-height: 150px;
+    min-height: 450px;
 }
 .ProjectsPageRightCollumnHeader{
     height: 25%;
@@ -405,7 +405,7 @@ section{
     align-items: start;
 }
 .ProjectsPageRightCollumnContentRow{
-    padding:10px 10px;
+    padding:20px 10px;
     transition: all 0.5s ease-in-out;
     cursor: pointer;
     border-radius: 20px;
