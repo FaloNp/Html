@@ -316,13 +316,7 @@ nav ul li a:hover {
     padding: var(--Project_margin);
 }
 
-#ProjectsPageButtonContainer{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .ProjectsPageButton{
     width: 200px;
     height: 200px;

@@ -443,6 +443,12 @@ section{
     background-color: #1B4D3E;
     
 }
+.footer{
+    margin: 20px 0px;
+    height: 100%;
+    max-height: auto;
+    min-height: auto;
+}
 /*//////////////////////////////////////////*/
 
 /*Blok opisajacy element strony: Field*/
