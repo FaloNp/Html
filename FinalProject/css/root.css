@@ -88,6 +88,18 @@ nav{
     display: none;
 }
 
+.photo img{
+    width: 25px;
+    height: 25px;
+    margin-right:20px;
+    transition: transform 0.3s ease-in-out;
+}
+.photo img:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+    animation: pulse 1.5s infinite;
+}
+
 #FullPageContainer {
     display: flex;
     flex-direction: column;
@@ -103,7 +115,7 @@ nav{
     justify-content: space-between;
     top:0px;
     left: 0px;
-    z-index: 2;
+    z-index: 10;
     background: white;
     color:black;
     transition: background-color 0.5s ease-in-out;
@@ -232,7 +244,7 @@ nav{
     width: 0px;
     height: 0px;
     left: 50%;
-    top:calc(50% + 40px);
+    top:calc(50% + 55px);
     font-size: 20px;
     color:#1B4D3E;
     display: flex;
@@ -240,14 +252,77 @@ nav{
     justify-content: center;
     font-family: 'Pacifico', cursive;
     cursor: pointer;
+    font-size: 50px;
 }
 .ProjectsPageButton:hover{
     animation: spin 1.5s linear infinite;
+}
+
+.frame {
+    top:calc(50% - 110px + 50px);
+    left:calc(50% - 110px + 50px);
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 205px;
+    height: 205px;
+    background: linear-gradient(45deg, #abecd6 0%, #fbed96 100%);
+
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.frame-back{
+    width: 200px;
+    height: 200px;
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.frameFoto {
+    top:calc(50% - 110px);
+    left:calc(50% - 110px);
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 205px;
+    height: 205px;
+    background: linear-gradient(45deg, #abecd5 0%, #fbed95 100%);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.frameFoto-back{
+    width: 200px;
+    height: 200px;
+    max-height: 200px;
+    background: white;
+}
+.AboutPageFoto{
+    background-image:url('foto/icons/photo.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    background-color: white;
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
 
+@media screen and (max-height: 500px) {
 
+    section{
+        overflow-y: scroll !important;
+        padding: 250px 0px;
+    }
+    #FullPageContainer{
+        overflow: scroll !important;
+    }
+}

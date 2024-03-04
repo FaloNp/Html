@@ -126,15 +126,14 @@ nav ul li a:hover {
 .AboutPageLeftCollumn{
     padding:0px;
     width: 30%;
+    min-width: 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .AboutPageFoto{
-    width: 210px;
-    height: 210px;
-    background-image:url('foto/icons/photo.png');
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
 }
 .AboutPageRightCollumn{
     padding:50px;
@@ -156,7 +155,7 @@ nav ul li a:hover {
     width: 100%;
     margin:auto;
     display: flex;
-    text-align: justify;
+    text-align: start;
 }
 /*//////////////////////////////////////////*/
 
@@ -354,6 +353,10 @@ nav ul li a:hover {
     height: 25px;
     margin-right:20px;
 }
+.ProjectsPageButtonText{
+    font-size: 20px;
+    margin-top: 0px;
+}
 /*//////////////////////////////////////////*/
 
 /*Blok opisajacy element strony: Field*/
@@ -512,13 +515,4 @@ nav ul li a:hover {
 
     
 /*//////////////////////////////////////////*/
-@media screen and (max-height: 500px) {
 
-    section{
-        overflow-y: scroll I !important;
-        padding: 250px 0px;
-    }
-    #FullPageContainer{
-        overflow: scroll !important;
-    }
-    }

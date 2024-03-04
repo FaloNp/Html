@@ -122,20 +122,18 @@ nav ul li a:hover {
 /*Blok opisajacy pierwszy element strony: Informacje*/
 .AboutPage{
     background-color: white;
-    
 }
 .AboutPageLeftCollumn{
     padding:0px;
     width: 30%;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .AboutPageFoto{
-    width: 210px;
-    height: 210px;
-    background-image:url('foto/icons/photo.png');
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
 }
 .AboutPageRightCollumn{
     padding:50px;
@@ -158,6 +156,7 @@ nav ul li a:hover {
     margin:auto;
     display: flex;
     text-align: justify;
+    padding-bottom: 20px;
 }
 /*//////////////////////////////////////////*/
 
@@ -354,14 +353,7 @@ nav ul li a:hover {
     width: 100%;
 }
 .ProjectsPageRightCollumnContentRow:hover{
-    background-color: #1B4D3E;
-    
-}
-
-#ProjectsPageRightCollumnContent img{
-    width: 25px;
-    height: 25px;
-    margin-right:20px;
+    background-color: #1B4D3E; 
 }
 /*//////////////////////////////////////////*/
 
@@ -501,15 +493,8 @@ nav ul li a:hover {
     max-width: 100%;
     max-height: 100%;
     aspect-ratio: 16/9;
-    
-   
 }
 
-
-.FieldPageContainerRight {
-    
-    
-}
 .ButtonRight{
     transform: rotate(45deg)!important;
 }
@@ -523,13 +508,3 @@ nav ul li a:hover {
 
     
 /*//////////////////////////////////////////*/
-@media screen and (max-height: 500px) {
-
-    section{
-        overflow-y: scroll I !important;
-        padding: 250px 0px;
-    }
-    #FullPageContainer{
-        overflow: scroll !important;
-    }
-}
